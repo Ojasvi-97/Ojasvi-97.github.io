@@ -27,7 +27,10 @@
       <h2>Presented at SC (Supercomputing Conference)</h2>
       <p>
         I attended and presented at the SC conference, sharing work related to large-scale GPU systems and training.
-        Below are photos and the presentation material.
+        In “Pushing the limits of performance: Supercomputing on Azure AI Infrastructure,” we describe how Azure’s ND v6 GB200/GB300 supercomputing platforms are built and operated at scale—combining NVLink/NVSwitch within-rack GPU fabrics and InfiniBand scale-out networking to support training across thousands of GPUs.
+We motivate why cluster validation is essential at this scale, where a single underperforming node can impact overall training efficiency, and we separate health checks from performance validation to ensure predictable, homogeneous performance before large runs. 
+We then outline a practical validation methodology using GEMM microbenchmarks (cuBLASLt) to measure per-GPU compute throughput and NCCL collectives to validate topology and interconnect health, supplemented by both small-scale and large-scale training runs with explicit variance thresholds. 
+Finally, we show why training workloads provide a more realistic end-to-end signal than inference and demonstrate validation using a communication-heavy MoE workload (Grok-1) to stress both compute and communication while evaluating scaling efficiency and load balance.
       </p>
 
       <div class="btnrow">
