@@ -1,10 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Ojasvi Bhalerao</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ojasvi Bhalerao</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
- Okay, hello!
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="name">Ojasvi Bhalerao</div>
+        <div class="tagline">Distributed Training • GPU Systems • ML Engineering</div>
+      </div>
+      <div class="nav-links">
+        <a class="active" href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="sc.html">SC Conference</a>
+        <a href="thesis.html">Thesis</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <h1>Hi — I’m Ojasvi.</h1>
+      <p>
+        I’m a software engineer at Microsoft working at the intersection of <b>distributed training</b>,
+        <b>GPU cluster performance</b>, and <b>ML systems</b>. I build automation and tooling that makes
+        large-scale training reliable, measurable, and fast — from fabric validation to telemetry-driven debugging.
+      </p>
+      <div class="pills">
+        <span class="pill">GB200 / GB300</span>
+        <span class="pill">NCCL • MoE (TP/EP)</span>
+        <span class="pill">DCGM telemetry</span>
+        <span class="pill">MLPerf Training & Inference</span>
+        <span class="pill">C++ • Python • CUDA</span>
+      </div>
+
+      <div class="btnrow">
+        <!-- Update these links when ready -->
+        <a class="btn" href="work.html">See work experience →</a>
+        <a class="btn" href="thesis.html">Read thesis (PDF) →</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>What I do</h2>
+        <ul class="list">
+          <li>Build large-scale training orchestration pipelines to validate GPU cluster <b>compute + communication</b> paths.</li>
+          <li>Use <b>DCGM telemetry</b> (utilization, power/thermals, step-time, comm overhead) to find bottlenecks and regressions.</li>
+          <li>Optimize distributed training configurations to maximize throughput and stability.</li>
+          <li>Contribute to <b>MLPerf Training/Inference</b> submissions and performance tuning with NVIDIA.</li>
+        </ul>
+
+        <div class="section" style="margin-top:14px;">
+          <h2>Just me (non-work)</h2>
+          <p>
+            Outside of work, I like staying curious and making things. I’m into nature trips and hikes, photography,
+            and building small personal projects that help me learn. I also love desserts (even though I’m trying to be responsible about it).
+          </p>
+          <ul class="list">
+            <li>Outdoor stuff: hikes, waterfalls, national parks</li>
+            <li>Creative: photography + turning short clips into mini movies</li>
+            <li>Learning: deep dives into systems + ML research topics</li>
+          </ul>
+          <p class="small">Tip: you can replace this section with whatever feels most “you” — cooking/baking, travel, music, etc.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Quick links</h2>
+        <div class="kv">
+          <div class="k">Email</div>
+          <div class="v"><a href="mailto:ojubhalerao@gmail.com">ojubhalerao@gmail.com</a></div>
+
+          <div class="k">LinkedIn</div>
+          <div class="v"><a href="#" target="_blank" rel="noopener">Add your LinkedIn URL</a></div>
+
+          <div class="k">GitHub</div>
+          <div class="v"><a href="https://Ojasvi-97.github.io" target="_blank" rel="noopener">Ojasvi-97.github.io</a></div>
+        </div>
+
+        <div class="section">
+          <h2>Highlights</h2>
+          <ul class="list">
+            <li><b>Cluster validation:</b> rack-aware placement, bisection isolation, MoE workloads, DCGM telemetry</li>
+            <li><b>MLPerf:</b> inference on GB300; training submission work on GB200</li>
+            <li><b>LLM systems:</b> eval pipelines; inference optimization (C++/CUDA)</li>
+          </ul>
+          <p class="small">You’ll find the detailed bullets on the Work page.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="y"></span> Ojasvi Bhalerao</div>
+      <div class="small">Built with GitHub Pages</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

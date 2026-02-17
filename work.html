@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Work • Ojasvi Bhalerao</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="name">Ojasvi Bhalerao</div>
+        <div class="tagline">Work Experience</div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="work.html">Work</a>
+        <a href="sc.html">SC Conference</a>
+        <a href="thesis.html">Thesis</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h2>Software Engineer • Microsoft (Jun 2023 – Present)</h2>
+      <ul class="list">
+        <li>Collaborated with OpenAI to design experiments on how <b>LLM architecture</b> and <b>GPU rack placement</b> impact performance and efficiency, informing more thermally efficient cluster designs.</li>
+        <li><b>Led GB200 cluster validation</b> as team lead + lead developer, building an automated training-based pipeline (incl. <b>MoE workloads</b>) with <b>rack-aware placement</b>, <b>node/rack bisection isolation</b>, and <b>DCGM telemetry</b> to validate compute/communication fabric and maximize GPU utilization.</li>
+        <li>Contributed to <b>MLPerf Training</b> and <b>MLPerf Inference</b> submissions over multiple cycles, partnering with NVIDIA on optimal benchmark configurations; delivered MLPerf Inference on <b>GB300</b> and currently driving upcoming MLPerf Training on <b>GB200</b> clusters.</li>
+        <li>Designed and implemented an LLM evaluation pipeline using standardized datasets (SQuAD, MMLU, PIQA), replicating results from LLaMA papers to measure performance across quantized models and internal implementations.</li>
+        <li>Developed an LLM inference framework for quantized LLaMA 2 models in <b>C++/CUDA</b>, optimized with <b>FlashAttention</b> and <b>cuBLASLt</b> kernels (≥2× throughput); reduced GPU memory usage ~50% via FP16→FP8 weight conversion.</li>
+      </ul>
+    </div>
+
+    <div class="card section">
+      <h2>Data Science Intern • Microsoft (May 2022 – Aug 2022)</h2>
+      <ul class="list">
+        <li>Built a real-time dashboard using SentenceTransformers embeddings + PySpark to cluster millions of bug reports, reducing triage time from hours to minutes.</li>
+      </ul>
+    </div>
+
+    <div class="card section">
+      <h2>Data Scientist • IBM India Pvt Ltd (Jan 2019 – Jul 2021)</h2>
+      <ul class="list">
+        <li>Designed and developed high-throughput APIs for an AI-based cyber threat analysis suite to prioritize threats and improve security decision-making.</li>
+        <li><b>Led the data science team</b> and served as lead developer, building a fault-tolerant information extraction pipeline (CNN + NLP models) for procurement documents, achieving ~87% accuracy.</li>
+        <li>Designed and patented metrics and algorithms for hierarchies in signed/unsigned networks, with applications to distributed system reliability.</li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <div><a href="index.html">← Back to Home</a></div>
+      <div class="small">Last updated: edit this line whenever you want</div>
+    </div>
+  </div>
+</body>
+</html>
