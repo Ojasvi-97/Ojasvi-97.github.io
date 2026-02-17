@@ -95,6 +95,9 @@
 
       <div class="card">
         <h2>Just me</h2>
+        <button class="btn" id="cuteBtn" type="button">Click for a tiny surprise ✨</button>
+        <div id="cuteToast" class="toast" aria-live="polite"></div>
+
         <p>
           Outside of work, I like doing things that feel adventurous and creative. I paint when I want to slow down, and I’ll
           hike whenever I can. I’m also the type of person who will say yes to <b>skydiving</b> and try to <b>snorkel at every
@@ -139,5 +142,29 @@
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
+  <script>
+  const messages = [
+    "Thanks for stopping by 😊",
+    "Hope you have a cozy day ✨",
+    "You’re doing great — keep going 💛",
+    "May your code compile on the first try 🌼",
+    "Sending good vibes (and stable NCCL) 🌿"
+  ];
+
+  const btn = document.getElementById("cuteBtn");
+  const toast = document.getElementById("cuteToast");
+
+  if (btn && toast) {
+    btn.addEventListener("click", () => {
+      const msg = messages[Math.floor(Math.random() * messages.length)];
+      toast.textContent = msg;
+
+      toast.classList.remove("show");
+      void toast.offsetWidth; // re-trigger animation
+      toast.classList.add("show");
+    });
+  }
+</script>
+
 </body>
 </html>

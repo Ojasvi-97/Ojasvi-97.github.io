@@ -249,3 +249,35 @@ a:hover{ text-decoration:underline; }
   background: rgba(255,255,255,.92);
   text-decoration:none;
 }
+
+.toast{
+  position: fixed;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(26,26,26,.14);
+  color: rgba(26,26,26,.92);
+  padding: 10px 14px;
+  border-radius: 14px;
+  box-shadow: 0 10px 26px rgba(26,26,26,.12);
+  opacity: 0;
+  pointer-events: none;
+  font-weight: 700;
+}
+
+.toast.show{
+  opacity: 1;
+  animation: popIn .25s ease-out, floatUp 2.3s ease-in forwards;
+}
+
+@keyframes popIn{
+  0% { transform: translateX(-50%) scale(.9); }
+  100% { transform: translateX(-50%) scale(1); }
+}
+
+@keyframes floatUp{
+  0% { transform: translateX(-50%) translateY(0); opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateX(-50%) translateY(-18px); opacity: 0; }
+}
