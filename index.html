@@ -26,71 +26,106 @@
     <div class="hero">
       <h1>Hi — I’m Ojasvi.</h1>
       <p>
-        I’m a software engineer at Microsoft working at the intersection of <b>distributed training</b>,
-        <b>GPU cluster performance</b>, and <b>ML systems</b>. I build automation and tooling that makes
-        large-scale training reliable, measurable, and fast — from fabric validation to telemetry-driven debugging.
+        I did my <b>Bachelor’s in Computer Science</b> in India and earned my <b>Master’s in Computer Science</b> from the
+        <b>University of Colorado Boulder</b>.
+        I’m currently a <b>Software Engineer II</b> at <b>Microsoft</b> in the <b>HPC/AI</b> org, where I build systems and
+        automation to validate and optimize large-scale GPU clusters for distributed training workloads.
       </p>
+      <p>
+        My interests sit at the intersection of <b>distributed training</b>, <b>computer vision</b>, and <b>NLP</b>—especially
+        building practical, high-performance tooling that makes ML workloads faster, more reliable, and easier to debug.
+      </p>
+
       <div class="pills">
         <span class="pill">GB200 / GB300</span>
-        <span class="pill">NCCL • MoE (TP/EP)</span>
-        <span class="pill">DCGM telemetry</span>
+        <span class="pill">NCCL • SLURM • DCGM</span>
+        <span class="pill">MoE (TP/EP)</span>
         <span class="pill">MLPerf Training & Inference</span>
         <span class="pill">C++ • Python • CUDA</span>
       </div>
 
       <div class="btnrow">
-        <!-- Update these links when ready -->
-        <a class="btn" href="work.html">See work experience →</a>
-        <a class="btn" href="thesis.html">Read thesis (PDF) →</a>
+        <a class="btn" href="work.html">Work experience →</a>
+        <a class="btn" href="sc.html">SC presentation →</a>
+        <a class="btn" href="thesis.html">Thesis →</a>
       </div>
     </div>
 
     <div class="grid">
       <div class="card">
         <h2>What I do</h2>
+        <p>
+          Most of my work is ML systems + GPU infrastructure: making large-scale training runs stable, measurable, and fast.
+          Here are the themes that summarize my experience so far:
+        </p>
         <ul class="list">
-          <li>Build large-scale training orchestration pipelines to validate GPU cluster <b>compute + communication</b> paths.</li>
-          <li>Use <b>DCGM telemetry</b> (utilization, power/thermals, step-time, comm overhead) to find bottlenecks and regressions.</li>
-          <li>Optimize distributed training configurations to maximize throughput and stability.</li>
-          <li>Contribute to <b>MLPerf Training/Inference</b> submissions and performance tuning with NVIDIA.</li>
+          <li>
+            <b>Cluster validation for distributed training:</b> led GB200 cluster validation as team lead + lead developer,
+            building an automated training-based pipeline (including <b>MoE workloads</b>) using <b>rack-aware placement</b>,
+            <b>node/rack bisection isolation</b>, and <b>DCGM telemetry</b> to validate compute + communication fabric.
+          </li>
+          <li>
+            <b>Benchmarking and performance configuration:</b> contributed to <b>MLPerf Training</b> and <b>MLPerf Inference</b>
+            submissions over multiple cycles, collaborating with NVIDIA on optimal configurations (incl. GB300 inference and
+            ongoing GB200 training work).
+          </li>
+          <li>
+            <b>LLM evaluation and reproducibility:</b> built an LLM evaluation pipeline using standardized datasets (SQuAD, MMLU,
+            PIQA), replicating published results to compare implementations and quantization variants.
+          </li>
+          <li>
+            <b>LLM inference optimization:</b> developed C++/CUDA inference for quantized LLaMA models using <b>FlashAttention</b>
+            and <b>cuBLASLt</b>, improving throughput and reducing memory footprint via lower-precision weights.
+          </li>
+          <li>
+            <b>Applied NLP at scale:</b> built embedding + PySpark pipelines to cluster millions of bug reports and improve
+            triage workflows; previously led an information extraction pipeline (CNN + NLP) for procurement documents (~87% accuracy).
+          </li>
         </ul>
 
         <div class="section" style="margin-top:14px;">
-          <h2>Just me (non-work)</h2>
-          <p>
-            Outside of work, I like staying curious and making things. I’m into nature trips and hikes, photography,
-            and building small personal projects that help me learn. I also love desserts (even though I’m trying to be responsible about it).
-          </p>
+          <h2>Current interests</h2>
           <ul class="list">
-            <li>Outdoor stuff: hikes, waterfalls, national parks</li>
-            <li>Creative: photography + turning short clips into mini movies</li>
-            <li>Learning: deep dives into systems + ML research topics</li>
+            <li><b>Distributed training:</b> efficiency, stability, debugging, and scaling behaviors (especially communication-heavy workloads).</li>
+            <li><b>Computer vision & multimodal ML:</b> building practical systems that connect vision/audio/text in real-world settings.</li>
+            <li><b>NLP:</b> structured extraction, evaluation pipelines, and “systems-first” NLP that works reliably at scale.</li>
           </ul>
-          <p class="small">Tip: you can replace this section with whatever feels most “you” — cooking/baking, travel, music, etc.</p>
         </div>
       </div>
 
       <div class="card">
-        <h2>Quick links</h2>
-        <div class="kv">
-          <div class="k">Email</div>
-          <div class="v"><a href="mailto:ojubhalerao@gmail.com">ojubhalerao@gmail.com</a></div>
+        <h2>Just me</h2>
+        <p>
+          Outside of work, I like doing things that feel adventurous and creative. I paint when I want to slow down, and I’ll
+          hike whenever I can. I’m also the type of person who will say yes to <b>skydiving</b> and try to <b>snorkel at every
+          opportunity</b>.
+        </p>
+        <p>
+          I’m also obsessed with learning about the <b>immune system</b> and <b>collective mechanisms</b>—how complex behavior
+          emerges from simple rules—whether that’s in biology and nature, or in engineered systems like clusters and distributed ML.
+        </p>
 
-          <div class="k">LinkedIn</div>
-          <div class="v"><a href="#" target="_blank" rel="noopener">Add your LinkedIn URL</a></div>
+        <div class="section">
+          <h2>Quick links</h2>
+          <div class="kv">
+            <div class="k">Email</div>
+            <div class="v"><a href="mailto:ojubhalerao@gmail.com">ojubhalerao@gmail.com</a></div>
 
-          <div class="k">GitHub</div>
-          <div class="v"><a href="https://Ojasvi-97.github.io" target="_blank" rel="noopener">Ojasvi-97.github.io</a></div>
+            <div class="k">LinkedIn</div>
+            <div class="v"><a href="#" target="_blank" rel="noopener">Add your LinkedIn URL</a></div>
+
+            <div class="k">GitHub</div>
+            <div class="v"><a href="https://ojasvi-97.github.io" target="_blank" rel="noopener">ojasvi-97.github.io</a></div>
+          </div>
         </div>
 
         <div class="section">
-          <h2>Highlights</h2>
+          <h2>What you’ll find here</h2>
           <ul class="list">
-            <li><b>Cluster validation:</b> rack-aware placement, bisection isolation, MoE workloads, DCGM telemetry</li>
-            <li><b>MLPerf:</b> inference on GB300; training submission work on GB200</li>
-            <li><b>LLM systems:</b> eval pipelines; inference optimization (C++/CUDA)</li>
+            <li><b>Work:</b> detailed bullets and project scope</li>
+            <li><b>SC Conference:</b> photos + presentation material</li>
+            <li><b>Thesis:</b> abstract + full PDF embed</li>
           </ul>
-          <p class="small">You’ll find the detailed bullets on the Work page.</p>
         </div>
       </div>
     </div>
