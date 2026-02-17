@@ -290,32 +290,37 @@ a:hover{ text-decoration:underline; }
 }
 
 /* animated overlay that doesn't block clicks */
-.nav-sheen{
-  position:absolute;
-  inset:0;
-  pointer-events:none;      /* <- doesn't interrupt nav clicks */
-  opacity:.55;
-  background:
-    linear-gradient(
-      115deg,
-      transparent 0%,
-      rgba(255,255,255,.00) 35%,
-      rgba(255,255,255,.40) 50%,
-      rgba(255,255,255,.00) 65%,
-      transparent 100%
-    );
-  transform: translateX(-120%);
-  animation: navSheen 7s ease-in-out infinite;
+.nav{ 
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  overflow: hidden;   /* keeps dog inside navbar */
 }
 
-@keyframes navSheen{
-  0%   { transform: translateX(-120%); }
-  45%  { transform: translateX(-120%); }
-  70%  { transform: translateX(120%); }
-  100% { transform: translateX(120%); }
+/* Cute dog that runs across without blocking clicks */
+.nav-dog{
+  position: absolute;
+  top: 50%;
+  left: -60px;                 /* start off-screen */
+  transform: translateY(-50%);
+  pointer-events: none;        /* IMPORTANT: don't block nav */
+  user-select: none;
+  font-size: 22px;
+  opacity: .95;
+  filter: drop-shadow(0 4px 6px rgba(26,26,26,.18));
+  animation: dogRun 10s linear infinite;
 }
 
-/* optional: respect reduced motion */
+/* Pause briefly, then run across */
+@keyframes dogRun{
+  0%   { transform: translate(-60px, -50%) scaleX(1); }
+  15%  { transform: translate(-60px, -50%) scaleX(1); } /* idle */
+  85%  { transform: translate(calc(100vw + 60px), -50%) scaleX(1); }
+  100% { transform: translate(calc(100vw + 60px), -50%) scaleX(1); }
+}
+
+/* Respect reduced motion */
 @media (prefers-reduced-motion: reduce){
-  .nav-sheen{ animation: none; }
+  .nav-dog{ animation: none; }
 }
+
